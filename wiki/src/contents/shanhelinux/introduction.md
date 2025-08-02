@@ -111,7 +111,7 @@ sudo nixos-rebuild switch
 以复现配置。
 
 > 注意：
->> 安装完成后，NixOS仍然会保留上一代的配置，着极大可能会占用你的储存空间，请运行以下命令进行清理：
+>> 安装完成后，NixOS仍然会保留上一代的配置，这极大可能会占用你的储存空间，请运行以下命令进行清理：
 >> ```bash
 >> sudo nix-collect-garbage -d
 >> // or
