@@ -80,7 +80,7 @@ index:  true
 
     默认情况下，构建器写入标准输出和标准错误的输出将回显到 Nix 命令的标准错误中。此选项可抑制此行为。请注意，构建器的标准输出和错误始终写入日志文件中prefix/nix/var/log/nix。
 
-- `--max-jobs/-j 数字`
+- `--max-jobs/-j` *number*
 
     将 Nix 并行执行的最大构建作业数设置为指定数量。指定auto使用系统中的 CPU 数量。默认值由max-jobs配置设置指定，该设置本身默认为1。更高的值在 SMP 系统上或利用 I/O 延迟时很有用。
 
@@ -116,7 +116,7 @@ index:  true
 
     使用此选项时，不会尝试打开 Nix 数据库。大多数 Nix 操作都需要数据库访问，因此这些操作将会失败。
 
-- `--arg 名称 值`
+- `--arg` *name* *value*
 
     `nix-env`、`nix-instantiate`、`nix-shell` 和 `nix-build` 均接受此选项。在评估 Nix 表达式时，表达式评估器会自动尝试调用遇到的函数。它可以自动调用每个参数都有[默认值（default value）](https://nix.dev/manual/nix/2.28/language/syntax#functions)的函数（例如，{argName ? defaultValue}: ...）。
     使用--arg，你还可以调用参数没有默认值的函数（或覆盖默认值）。也就是说，如果求值器遇到一个参数名为name的函数，它将使用值value来调用它。
